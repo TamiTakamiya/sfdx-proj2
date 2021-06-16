@@ -1,18 +1,29 @@
-# Salesforce DX Project: Next Steps
+# SFDX Sample "Project 2" For CumulusCI Task Test
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Summary
+This is an SFDX sample repository for CumulusCI (CCI) task test.
+This repository is supoosed to be used with 
+[another repository](https://github.com/TamiTakamiya/sfdx-proj1).
 
-## How Do You Plan to Deploy Your Changes?
+## Setup
+1. Clone this repository on your PC
+1. Set your Dev Hub org with
+    ```
+    sfdx auth:web:login -d -a DevHub 
+    ```
+## Instructions
+This repository contains two CCI tasks and both will complete
+without errors.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+1. dxtask
+    ```
+    cci task run dxtask
+    ```
+    This task should display the output of `sfdx force:org:list` command.
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+2. mytask
+    ```
+    cci task run mytask
+    ```
+    This task invokes the `MyTask` class defined in `scripts/tasks/MyTask.py`
+    and the output message `This is my task.`
