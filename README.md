@@ -26,4 +26,4 @@ without errors.
     cci task run mytask
     ```
     This task invokes the `MyTask` class defined in `scripts/tasks/MyTask.py`
-    and the output message `This is my task.`
+    and prints the output message `This is my task.`
