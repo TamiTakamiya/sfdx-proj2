@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.36.0'
+project:
+    name: sfdx-proj2
+    package:
+        name: sfdx-proj2
+        api_version: '50.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/sfdx-proj2/tests
+            options:
+                outputdir: robot/sfdx-proj2/results
+
+    robot_testdoc:
+        options:
+            path: robot/sfdx-proj2/tests
+            output: robot/sfdx-proj2/doc/sfdx-proj2_tests.html
+
+    mytask:
+        class_path: scripts.tasks.MyTask.MyTask
+
