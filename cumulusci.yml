@@ -20,5 +20,13 @@ tasks:
             output: robot/sfdx-proj2/doc/sfdx-proj2_tests.html
 
     mytask:
+        description: External python script
         class_path: scripts.tasks.MyTask.MyTask
+
+    mytask2:
+        description: Display
+        class_path: cumulusci.tasks.sfdx.SFDXBaseTask
+        group: dx
+        options:
+            command: force:org:list
 
