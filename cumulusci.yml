@@ -23,7 +23,7 @@ tasks:
         description: External python script
         class_path: scripts.tasks.MyTask.MyTask
 
-    mytask2:
+    dxtask:
         description: Display
         class_path: cumulusci.tasks.sfdx.SFDXBaseTask
         group: dx
